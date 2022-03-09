@@ -1,8 +1,9 @@
-
-//change the below code
-// the function below now only works with integers, change it to work with any type
-// also fill out the body
-void multiples (int& sum, int x, int n)
-{
-
+template <typename WhatKind>
+void multiples (WhatKind& sum, WhatKind x, int n) {
+    sum++;
+    for (int i = 1; i <= n; i++)
+        // Cast i to 'WhatKind' type
+        sum += x * (WhatKind) i;
 }
+
+
